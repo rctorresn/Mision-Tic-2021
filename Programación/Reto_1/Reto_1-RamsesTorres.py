@@ -1,29 +1,28 @@
-SalarioBase = int(input())
-HorasExtra = int(input())
-Bonificacion = float(input())
+SalarioBase,HorasExtra,Bonificacion = input().split()
+SalarioBase=float(SalarioBase)
+HorasExtra=float(HorasExtra)
+Bonificacion=float(Bonificacion)
 
-ValorHora = (SalarioBase/190)
+ValorHora=(SalarioBase/190)
 
-if Bonificacion == 1:
-    Bonificacion = (ValorHora * 0.035)
+if HorasExtra>=1:
+    HorasExtra=((ValorHora*0.45)*(HorasExtra))+(ValorHora)
 else:
-    Bonificacion = 0
+    HorasExtra=0
 
-if HorasExtra >= 1:
-    HorasExtra = (ValorHora * 0.45)
+if Bonificacion==1:
+    Bonificacion=((SalarioBase*0.035)+(ValorHora))
 else:
-    HorasExtra = 0
+    Bonificacion=0
 
-SalarioTotal = (SalarioBase + HorasExtra + Bonificacion)
+SalarioTotal=(SalarioBase+HorasExtra+Bonificacion)
 
-PlanSalud = (SalarioTotal * 0.065)
-Pension = (SalarioTotal * 0.05)
-CajaCompensacion = (SalarioTotal * 0.04)
+PlanSalud=round((SalarioTotal*0.065),3)
 
-SalarioTotalDescuentos = (SalarioTotal - PlanSalud - Pension - CajaCompensacion)
+Pension=round((SalarioTotal*0.05),3)
 
-print(round(SalarioTotalDescuentos,2))
-print(round(SalarioTotal,2))
+CajaCompensacion=round((SalarioTotal*0.04),3)
 
+SalarioTotalDescuentos=round((SalarioTotal-PlanSalud-Pension-CajaCompensacion),1)
 
-
+print(SalarioTotalDescuentos, round(SalarioTotal,1))

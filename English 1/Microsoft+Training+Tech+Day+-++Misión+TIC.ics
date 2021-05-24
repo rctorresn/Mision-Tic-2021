@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+METHOD:PUBLISH
+PRODID:-//Microsoft Corporation//Outlook 11.0 MIMEDIR//EN
+BEGIN:VEVENT
+UID:403960a7b40665156
+DTSTAMP:20210521T132214Z
+DTSTART:20210526T140000Z
+DTEND:20210526T173000Z
+SUMMARY:Microsoft Training Tech Day -  Misión TIC
+LOCATION:Microsoft Teams
+DESCRIPTION:Microsoft Training Tech Day -  Misión TIC\n\n26 de mayo\, 2021 | 09:00 AM | (GMT-05:00) Bogota\, Lima\, Quito\, Rio Branco\n\nEl Ministerio TIC\, en alianza con Microsoft\, invitan al Training Tech Day a todos los colombianos que hacen parte de Misión TIC 2022. Sin importar dónde estés\, te retamos a potencializar tus conocimientos y certificarte oficialmente en la Nube de Azure- AZ-900. Comprender y dominar los conceptos fundamentales de la Nube es escencial para tu crecimiento en el mundo del desarrollo. ¡Te esperamos! \n\nLe enviaremos un vínculo de Teams antes de que comience el evento.
+END:VEVENT
+END:VCALENDAR
