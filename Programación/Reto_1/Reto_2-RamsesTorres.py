@@ -1,18 +1,22 @@
 distanciaCamaras, recordVelocidad, tiempo = input().split()
-distanciaCamaras = ("Distancia de las camaras es: ", distanciaCamaras)
-recordVelocidad = ("Record de velocidad es: ", recordVelocidad)
-tiempo = ("Tiempo de vuelta: ", tiempo)
+distanciaCamaras = float(distanciaCamaras)/1000
+recordVelocidad = float(recordVelocidad)
+tiempo = float(tiempo)/3600
 
-while recordVelocidad:
-    recordVelocidad == 100
-    print("el piloto no supero el record")
-    break
+if(distanciaCamaras > 0 and recordVelocidad>0 and tiempo > 0):
+
+    velocidadMedia = round((distanciaCamaras/tiempo),1)
+    record1 = (velocidadMedia*0.25)
+    velocidadC = record1+velocidadMedia
+
+    record2 = (recordVelocidad*0.25)
+    recordC = record2+recordVelocidad
+        
+    if(velocidadMedia <= recordVelocidad):
+        print(round(velocidadMedia,1), "VELOCIDAD NORMAL")
+    if(velocidadMedia > recordC ):
+        print(round(velocidadMedia,1), "ENTREVISTA")
+    if(velocidadMedia > recordVelocidad and velocidadMedia < recordC):
+        print(round(velocidadMedia,1), "NUEVO RECORD")
 else:
-    recordVelocidad >= 100
-    print("Nuevo record de velocidad")
-
-
-
-
-
-
+    print("VALORES NEGATIVOS")
