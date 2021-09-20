@@ -1,0 +1,37 @@
+case "AGREGAR":
+                         opExitosa = miProducto.agregar(Integer.parseInt(entradas[0]), entradas[1] , Double.parseDouble(entradas[2]),Integer.parseInt(entradas[3]));
+                         if(opExitosa == true){
+                             Producto misProducto = miProducto.listaProductos.get(Integer.parseInt(entradas[0]));
+                             System.out.println("Codigo: " + entradas[0]  + "Nuevo Inventario: " + misProducto.getInventario());
+                         }else{
+                             System.out.println("ERROR");  
+                         }
+                         break;
+
+
+
+
+public boolean generarInforme(int codigo, double nuevoPrecio, double precio, int inventario , int nuevoInventario){
+        Producto miProductoOr = listaProductos.get(codigo);
+        Producto miProductoIni = listaProductos.get(precio);
+        Producto miProductoNuevo = listaProductos.get(nuevoPrecio);
+        Producto miProductoInvIni = listaProductos.get(inventario);
+        Producto miProductoInvNuevo = listaProductos.get(nuevoInventario);
+        if(miProductoIni == null || inventario < 0 || nuevoInventario < 0){
+            return false;
+            
+        }
+
+
+
+
+case "AGREGAR2":
+                         opExitosa = miProducto.agregar(Integer.parseInt(entradas[0]), entradas[1] , Double.parseDouble(entradas[2]),Integer.parseInt(entradas[3]));
+                         if(miProducto.listaProductos.containsKey(entradas[0])){
+                            System.out.println("ERROR");
+                            }else{
+                                if(opExitosa == true){
+                                    Producto misProducto = miProducto.listaProductos.get(Integer.parseInt(entradas[0]));
+                                    System.out.println("Codigo: " + entradas[0]  + "Nuevo Inventario: " + misProducto.getInventario());
+                             }   
+                            }

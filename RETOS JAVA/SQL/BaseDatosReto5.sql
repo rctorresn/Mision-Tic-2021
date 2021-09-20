@@ -1,0 +1,13 @@
+DROP DATABASE IF EXISTS producto;
+CREATE DATABASE IF NOT EXISTS producto;
+USE producto;
+
+SELECT 'CREATING DATABASE STRUCTURE' as 'INFO';
+
+CREATE TABLE productos(
+codigo INT AUTO_INCREMENT NOT NULL,
+nombre VARCHAR(45) UNIQUE NOT NULL,
+precio DOUBLE             NOT NULL,
+inventario INT            NOT NULL,
+PRIMARY KEY(codigo)
+);
